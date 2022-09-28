@@ -1,0 +1,72 @@
+<!-- this container to work -->
+<div class="container-works"></div>
+<script>
+  var works = [
+    {
+      "linkImg" : "./assets/images/works/1.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+    {
+      "linkImg" : "./assets/images/works/2.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+    {
+      "linkImg" : "./assets/images/works/3.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+    {
+      "linkImg" : "./assets/images/works/4.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+    {
+      "linkImg" : "./assets/images/works/1.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+    {
+      "linkImg" : "./assets/images/works/2.png",
+      "linkYoutub" : "",
+      "linkImages" : "",
+      "linkBehance" : "",
+      "linkDemo" : "",
+    },
+  ];
+  works.map((ele , i) =>{
+    $(".container-works").append(`
+      <div class="item-work position-relative float-start overflow-hidden ${i == 0 ? 'active' : ''} ">
+        <img class="w-100 h-100" src="${ele.linkImg}" alt="">
+        <ul class="btn-work position-absolute d-flex">
+          <li>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-images"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="far fa-paper-plane"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-behance"></i></a>
+          </li>
+        </ul>
+      </div>
+    `);
+  });
+  $(".item-work").hover(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+}); 
+</script>

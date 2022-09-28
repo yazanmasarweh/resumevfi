@@ -1,0 +1,19 @@
+<!-- this container to home -->
+<div class="col">
+  <div class="d-flex align-items-center justify-content-center w-100" style="height: 100vh;">
+     <div class="home w-100">
+        <div class="logo-home mx-auto position-relative">
+            <img class="img-fluid animate__animated animate__rubberBand animate__delay-1s" src="./assets/images/logo.png" alt="">
+        </div>
+        <div class="title-web mx-auto position-relative d-flex flex-column align-items-center gap-0 overflow-hidden">
+          <h1 class="m-0 animate__animated animate__backInLeft">WOC</h1>
+          <span class="lead position-absolute animate__animated animate__backInUp">Welcome To World Of Code <a onclick="goPage('./pages/about.html')" class="go-about" href="#">Who Are We</a> </span>
+        </div>
+     </div>
+  </div>
+</div>
+<script>
+  if($(".form-check-input").val() == "true"){
+    $(".title-web h1").removeClass("animate__backInLeft").addClass("animate__backInRight");
+  }
+</script>

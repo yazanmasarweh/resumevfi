@@ -1,0 +1,27 @@
+<!-- this container to about -->
+<div class="col-11 col-xl-7 col-md-8 col-sm-11 "  style="z-index:9;">
+  <div class="who-are-me d-flex flex-column justify-content-center align-items-start ">
+    <div class="content-about position-relative animate__animated animate__zoomIn">
+      <h2 class="text-capitalize fw-bold ">who are we ?</h2>
+      <p class="lead">
+        <abbr class="text-decoration-none fw-bold" title="world of code">WOC</abbr> Company soecializes in designing, programming,
+        developing website and mobile applications. We aim to provide distinctive projects 
+        that fit the vision of project owners m as well as develop our skills and experise 
+        in this field by solving those challanges that face us.
+        <div class="download-CV lead">
+          <span>Experience And Skills : <a onclick="goPage('./pages/experience.html')" class="go-skills text-decoration-none fw-bold" href="#">Here</a></span>
+        </div>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="col-xl-5 col-md-4 my-auto" style="z-index:9;">
+  <div class="img-about text-center">
+    <img class="img-fluid animate__animated animate__fadeInRight" src="./assets/images/orange.png" alt="">
+  </div>
+</div>
+<script>
+  if($(".form-check-input").val() == "true"){
+    $(".img-about img").removeClass("animate__fadeInRight").addClass("animate__fadeInLeft");
+  }
+</script>

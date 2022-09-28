@@ -1,0 +1,73 @@
+<!-- this container to projects -->
+<div style="z-index:888;" class="col">
+     <div class="container-projects d-flex flex-wrap"></div> 
+</div>
+<script>
+     var allProj = [
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/1.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/2.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/3.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/4.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/2.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/3.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/1.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/4.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/2.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/1.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/3.png"
+          },
+          {
+               "title": "anime web",
+               "linkImg": "./assets/images/works/1.png"
+          },
+     ];
+     allProj.map((ele) => {
+          $(".container-projects").append(`
+          <div onclick="goPage('./pages/project.html')" class="project  overflow-hidden position-relative" >
+               <h3 class="position-absolute top-50 start-50 translate-middle">${ele.title}</h3>
+               <img class="img-fluid w-100 h-100" src="${ele.linkImg}" alt="">
+               <span class="light-white"></span>
+          </div>  
+          `);
+     });  
+     $('.project').hover(function () {
+          $(this).find(".light-white").show().addClass("active");
+          $(this).find("h3").fadeOut(600);
+     }, function () {
+          $(this).find(".light-white").hide().removeClass("active");
+          $(this).find("h3").delay(1000).fadeIn();
+     }
+     );
+</script>

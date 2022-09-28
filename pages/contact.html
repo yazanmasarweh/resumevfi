@@ -1,0 +1,148 @@
+<!-- this container to contact -->
+<div style="z-index: 888;" class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 animate__animated animate__flipInY">
+  <div class="container-contact">
+    <h2>Contact Us </h2>
+    <p class="lead">
+      You can contact us through our messenger or through an email or WhatsApp, and the response will be within a period
+      of less than 6 hours.
+    </p>
+  </div>
+  <div class="form-contact">
+    <form action="#">
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">User Name</label>
+        <input type="text" class="form-control" name="username" id="exampleFormControlInput1"
+          placeholder="Enter Your Name Please ..">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
+          placeholder="name@example.com">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlTextarea1" class="form-label">Your Suggestion</label>
+        <textarea class="form-control" name="message" id="exampleFormControlTextarea1" rows="5"></textarea>
+      </div>
+      <div class="mb-2">
+        <input type="submit" class="form-control" value="Send">
+      </div>
+    </form>
+  </div>
+</div>
+<div style="z-index: 888;" class="col-12 col-ms-12 col-md-12 col-lg-6 col-xl-6 pb-5">
+  <div class="buttons-contact">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-between">
+        <li class="page-item position-relative overflow-hidden m-2 d-flex justify-content-center align-items-center animate__animated animate__tada"><button class="button-social border-0 text-white bg-transparent" data-word="whatsup" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fab fa-whatsapp"></i></button></li>
+        <li class="page-item position-relative overflow-hidden m-2 d-flex justify-content-center align-items-center animate__animated animate__tada"><button class="button-social border-0 text-white bg-transparent" data-word="email" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fas fa-envelope"></i></button></li>
+        <li class="page-item position-relative overflow-hidden m-2 d-flex justify-content-center align-items-center animate__animated animate__tada"><button class="button-social border-0 text-white bg-transparent" data-word="linkedin" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fab fa-linkedin"></i></button></li>
+        <li class="page-item position-relative overflow-hidden m-2 d-flex justify-content-center align-items-center animate__animated animate__tada"><button class="button-social border-0 text-white bg-transparent" data-word="behance" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fab fa-behance"></i></button></li>
+        <li class="page-item position-relative overflow-hidden m-2 d-flex justify-content-center align-items-center animate__animated animate__tada"><button class="button-social border-0 text-white bg-transparent" data-word="youtube" data-bs-toggle="modal"
+            data-bs-target="#exampleModal"><i class="fab fa-youtube"></i></button></li>
+      </ul>
+    </nav>
+    <iframe class="locations w-100 img-thumbnail animate__animated animate__fadeIn"
+      src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13479.667826614368!2d35.0718497!3d32.3677732!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2s!4v1660056168218!5m2!1sar!2s"
+      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index: 99999;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex flex-row justify-content-between">
+        <div class="rounded position-relative"> 
+          <p class="desc-contact px-3 lend"></p>
+          <div class="info-contact fs-5 px-3 py-1 fw-bold text-start text-white"></div>
+        </div>
+        <div>
+          <img class="pare-code" width="100px" height="100px" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $("input[name='username']").keyup(function () {
+    window.sessionStorage.setItem("input-username-resume", $(this).val());
+  });
+  $("input[name='email']").keyup(function () {
+    window.sessionStorage.setItem("input-email-resume", $(this).val());
+  });
+  $("textarea[name='message']").keyup(function () {
+    window.sessionStorage.setItem("textarea-message-resume", $(this).val());
+  });
+
+  $("input[name='username']").val(window.sessionStorage.getItem("input-username-resume") != null ? window.sessionStorage.getItem("input-username-resume") : "");
+  $("input[name='email']").val(window.sessionStorage.getItem("input-email-resume") != null ? window.sessionStorage.getItem("input-email-resume") : "");
+  $("textarea[name='message']").val(window.sessionStorage.getItem("textarea-message-resume") != null ? window.sessionStorage.getItem("textarea-message-resume") : "");
+
+  var infoDataSocial = [
+    {
+      items: {
+        title: "whatsup",
+        color: "#28ac00" ,
+        link: "www.facebook.com",
+        qrCode: "./assets/images/QR Code/Screenshot_5.png",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quidem illo magni harum eaque officia, vel quas sunt natus delectus minus enim dolorem."
+      }
+    },
+    {
+      items: {
+        title: "linkedin",
+        color: "#000b1c" ,
+        link: "www.facebook.com",
+        qrCode: "./assets/images/QR Code/Screenshot_5.png",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quidem illo magni harum eaque officia, vel quas sunt natus delectus minus enim dolorem."
+      }
+    },
+    {
+      items: {
+        title: "youtube",
+        color: "#f72a24" ,
+        link: "www.facebook.com",
+        qrCode: "./assets/images/QR Code/Screenshot_5.png",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quidem illo magni harum eaque officia, vel quas sunt natus delectus minus enim dolorem."
+      }
+    },
+    {
+      items: {
+        title: "behance",
+        color: "#000b1c" ,
+        link: "www.facebook.com",
+        qrCode: "./assets/images/QR Code/Screenshot_5.png",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quidem illo magni harum eaque officia, vel quas sunt natus delectus minus enim dolorem."
+      }
+    },
+    {
+      items: {
+        title: "email",
+        color: "#f72a24" ,
+        link: "www.facebook.com",
+        qrCode: "./assets/images/QR Code/Screenshot_5.png",
+        desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt quidem illo magni harum eaque officia, vel quas sunt natus delectus minus enim dolorem."
+      }
+    },
+  ]
+
+  $(".button-social").click(function () {
+    var item = $(this).data("word");
+    var result = infoDataSocial.filter((val) => {
+      return val.items.title == item;
+    });
+    // console.log(result[0].items.title);
+    $(".modal-title").text(result[0].items.title);
+    $(".pare-code").attr("src", result[0].items.qrCode);
+    $(".info-contact").text(result[0].items.link).css("background" , result[0].items.color );
+    $(".desc-contact").text(result[0].items.desc);
+  });
+</script>

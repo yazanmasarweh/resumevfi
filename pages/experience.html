@@ -1,0 +1,175 @@
+<!-- this container to skills -->
+<div class="content-expriance">
+  <div class="col-12">
+    <div class="py-5 d-flex flex-row gap-5 overflow-hidden" style="height:150px ;">
+      <h4 class="skill-and-exp position-relative text-white px-4">Skills And <br> Experience</h4>
+      <p class="lead overflow-auto desc-expriance" style="height:100px ;">
+        It is not possible to evaluate skills in a percentage . There is no limit to science to
+        assess whether it is zero or one. Rather, skills are upgraded with the experiences I
+        gained and faced challenges, and the assessment of my skills is through my work and I
+        see my skills at this level of evaluation. <span onclick="goPage('./pages/service.html')"  class="go-service">My Service</span>
+      </p>
+    </div>
+  </div>
+  <div class="col-12">
+      <div class="buts">
+        <button style="margin-left:0;" class="border-0 rounded-2" type="button" data-filter="all">All</button>
+        <button class="bg-success border-0 rounded-2" type="button" data-filter=".senior">Senior</button>
+        <button class="bg-primary border-0 rounded-2" type="button" data-filter=".junior">Junior</button>
+        <button class="bg-info border-0 rounded-2" type="button" data-filter=".familiar">Familiar</button>
+        <button class="rounded-2 border-0 float-end animate__animated animate__jello">CV</button>
+      </div>
+      <div class="container-skills d-flex flex-row flex-wrap justify-content-center gap-2 p-5"></div>
+    </div>
+</div>
+
+<script>
+  // lunch this plagin mixitup
+  var skills = [
+    {
+      "level" : "senior",
+      "name" : "html",
+      "link" : "../assets/images/skils/html.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "css",
+      "link" : "../assets/images/skils/css-3.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "javascript",
+      "link" : "../assets/images/skils/java-script.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "bootstrap",
+      "link" : "../assets/images/skils/bootstrap.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "php",
+      "link" : "../assets/images/skils/php.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "jquery",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Vue",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "Angular",
+      "name" : "Angular",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "React",
+      "name" : "React",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "Node js",
+      "name" : "Node js",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "Laraval",
+      "name" : "Laraval",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "Python",
+      "name" : "Python",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "flask",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Django",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Flutter",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Typescript",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "OOP",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Mysql",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Firebase",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "MongoDB",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Saas",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Api",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Tailwind",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Adobe Photoshop",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Adobe XD",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+    {
+      "level" : "senior",
+      "name" : "Illustrator",
+      "link" : "../assets/images/skils/jquery.png"
+    },
+  ];
+  var dirPage = $(".form-check-input").val() == "true" ? "animate__zoomInRight" : "animate__zoomInLeft" ;
+  skills.map((ele) =>{
+    $(".container-skills").append(`
+      <div class="mix p-1 ${ele.level}">
+        <div class="item-cate position-relative overflow-hidden animate__animated ${dirPage}" style="--animate-duration: ${Math.random()}s;">
+          <span class="position-relative text-center d-flex flex-column justify-content-around fw-bold">
+            <label class="position-relative text-capitalize">${ele.name}</label>
+            <img class="mx-auto" src="${ele.link}">
+          </span>
+        </div>
+      </div>
+    `);
+  });
+  var containerSkills = document.querySelector(".container-skills");
+  mixitup(containerSkills);
+</script>
